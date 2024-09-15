@@ -1,0 +1,22 @@
+//Este programa fue realizado el 04 de Septiembre del 2024.
+//El programa utiliza recursividad para sumar los numeros que el usurio ingrese.
+package recursividadn;
+import java.util.Scanner;
+public class RecursividadN {
+
+    public static void main(String[] args) {
+        Scanner leer= new Scanner(System.in);
+        System.out.println("Ingrese un numero");
+        int numero=leer.nextInt();
+        int resul=sum(numero);
+        System.out.println("La suma de los numeros es: "+resul);
+    }
+    public static int sum(int n){
+        if(n==1){
+            return 1;
+        } else{
+            return n + sum(n-1);
+        }
+    }
+    
+}
