@@ -1,0 +1,27 @@
+//Este programa fue realizado el 05 de Septiembre del 2024
+//Potencias de un numero
+package recursividadp;
+import java.util.Scanner;
+public class RecursividadP {
+
+    public static void main(String[] args) {
+      Scanner leer =new Scanner(System.in);
+      System.out.println("Ingrese un numero:");
+      int nu= leer.nextInt();
+      System.out.println("Ingrese la potencia:");
+      int po=leer.nextInt();
+      double resul=Math.pow(nu,po);
+    
+      System.out.println("La respuesta es:"+ resul);
+    }
+    public static int potencia (int numero, int potencia){
+        if(potencia==0){
+            return 1;
+        }else{
+            return numero*potencia(numero,potencia-1);
+        }
+        
+        
+    }
+    
+}
